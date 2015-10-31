@@ -56,6 +56,10 @@ function playToFive() {
   console.log('Let\'s play Rock Paper Scissors');
   var playerWins = 0;
   var computerWins = 0;
+
+// Used && instead of || because we don’t want to continue to loop until both are True.
+// it is bc only 1 has to be true in order for the whole statement to be true.
+// while the &&  only one of them reached 5 wins the loop will break.
   
   while((playerWins < 5) && (computerWins < 5)) {
       var playerMove = getInput();
