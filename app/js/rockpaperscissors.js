@@ -64,11 +64,11 @@ function playToFive() {
      
      
       if(winner === 'player') {
-	  console.log(“Human wins”);
+	  console.log("Human wins");
           playerWins += 1;
       }
       else if(winner === 'computer') {
-	  console.log(“Computer wins”);
+	  console.log("Computer wins");
           computerWins += 1;
       }
       console.log("Your move was " + playerMove + ", and the computer chose " + computerMove + ".");
