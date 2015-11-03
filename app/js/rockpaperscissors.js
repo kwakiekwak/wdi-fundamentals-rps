@@ -60,6 +60,7 @@ function getWinner(playerMove,computerMove) {
 
    return winner;
 }
+// playTo(x) play until computer or player has won an x amount of times.
 
 function playTo(x) {
   console.log('Let\'s play Rock Paper Scissors');
