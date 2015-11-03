@@ -49,10 +49,19 @@ function getWinner(playerMove,computerMove) {
 	   winner = 'computer';
 	}
    }
+   else if(playerMove === ’scissors’) {
+	if(computerMove === ‘paper’) {
+	   winner = ‘player’;
+	}
+	else {
+	   winner = ‘computer’;
+	}
+   }
+
    return winner;
 }
 
-function playToFive() {
+function playTo(x) {
   console.log('Let\'s play Rock Paper Scissors');
   var playerWins = 0;
   var computerWins = 0;
@@ -61,9 +70,10 @@ function playToFive() {
 // it is bc only 1 has to be true in order for the whole statement to be true.
 // while the &&  only one of them reached 5 wins the loop will break.
   
-  while((playerWins < 5) && (computerWins < 5)) {
-      var playerMove = getInput();
-      var computerMove = randomPlay();
+  while((playerWins < x) && (computerWins < x)) {
+
+      var playerMove = getPlayerMove();
+      var computerMove = getComputerMove();
       var winner = getWinner(playerMove, computerMove);
      
      
@@ -71,18 +81,19 @@ function playToFive() {
 	  console.log("Human wins");
           playerWins += 1;
       }
+
       else if(winner === 'computer') {
 	  console.log("Computer wins");
           computerWins += 1;
       }
       console.log("Your move was " + playerMove + ", and the computer chose " + computerMove + ".");
-      console.log("At present, you have " + playerWins + " wins, and the computer has " + computerWins + " wins." + "\n");
+      console.log(“Currently, you have " + playerWins + " wins, and the computer has " + computerWins + " wins." + "\n");
 
   }
   return [playerWins, computerWins];
 }
 
-playToFive();
+playTo(5);
 
 
 
