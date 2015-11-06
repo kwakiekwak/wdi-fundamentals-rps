@@ -1,8 +1,3 @@
-////////////////////////////////////////////////
-/*   Provided Code - Please Don't Edit   */
-////////////////////////////////////////////////
-'use strict';
-
 function getInput() {
     console.log("Please choose either 'rock', 'paper', or 'scissors’.");
     return prompt();
@@ -87,15 +82,12 @@ function playTo(x) {
 	  console.log("Computer wins");
           computerWins += 1;
       }
+	
       console.log("Your move was " + playerMove + ", and the computer chose " + computerMove + ".");
-      console.log(“Currently, you have " + playerWins + " wins, and the computer has " + computerWins + " wins." + "\n");
+      console.log("Currently, you have " + playerWins + " wins, and the computer has " + computerWins + " wins." + "\n");
 
   }
   return [playerWins, computerWins];
 }
 
 playTo(5);
-
-
-
-
