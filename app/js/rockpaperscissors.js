@@ -49,12 +49,12 @@ function getWinner(playerMove,computerMove) {
 	   winner = 'computer';
 	}
    }
-   else if(playerMove === ’scissors’) {
-	if(computerMove === ‘paper’) {
-	   winner = ‘player’;
+   else if(playerMove === 'scissors') {
+	if(computerMove === 'paper') {
+	   winner = 'player';
 	}
 	else {
-	   winner = ‘computer’;
+	   winner = 'computer';
 	}
    }
 
